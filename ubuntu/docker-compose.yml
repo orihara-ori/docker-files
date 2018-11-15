@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ubuntu:
+    build: .
+    tty: true
+    entrypoint: sh
+    command: -c "while true; do sleep 10; done"
+    volumes:
+      - "./work:/work"
+    ports:
+      - "3000:3000"
